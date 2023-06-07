@@ -21,7 +21,6 @@ print(2 ** 3)
 print(2 ** 3.) #Al cuadrado
 
 print(2 * 3 % 5)
-
 var = 1
 print(var)
 var = 1
@@ -37,8 +36,4 @@ b = 4.0
 leg_a = float(input("Inserta la longitud del primer cateto: "))
 leg_b = float(input("Inserta la longitud del segundo cateto: "))
 hypo = (leg_a**2 + leg_b**2) ** .5
-<<<<<<< HEAD
 print("La longitud de la hipotenusa es:", hypo)
-=======
-print("La longitud de la hipotenusa es:", hypo)
->>>>>>> 67d0a240d584351adb409309e1e40a1985d78d1e

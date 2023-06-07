@@ -31,8 +31,22 @@ class Empleado:
         salario_hora = self.salario / (horas_trabajo_diarias * dias_trabajo_semana)
         return salario_hora
 
+    def calcular_salario_horas_extras(self, horas_extras):
+        horas_diarias_maximas = 2
+        salario_hora_extra = self.calcular_salario_hora() * 1.5
+        salario_extras = 0
 
+        if horas_extras <= horas_diarias_maximas:
+            salario_extras = salario_hora_extra * horas_extras
+        else:
+            salario_extras = salario_hora_extra * horas_diarias_maximas
 
-Empleado1 = Empleado("Andres Montoya", "Analista", 2000)
+        return salario_extras
 
-print(f"Salario por hora de {Empleado1.get_nombre()}: ${Empleado1.calcular_salario_hora():.2f}")
+# Ejemplo de uso de la clase Empleado
+empleado1 = Empleado("Andres Montoya", "Analista", 2000)
+
+print(f"{Empleado.counter}")
+print(f"{empleado1.get_nombre()}: ${empleado1.calcular_salario_hora():.2f}")
+print(f"{empleado1.get_nombre()}: ${empleado1.calcular_salario_horas_extras(3):.2f}")
+
